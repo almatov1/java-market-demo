@@ -3,3 +3,7 @@ spring:
     url: jdbc:postgresql://localhost:5432/db
     username: root
     password: password
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: test-group
