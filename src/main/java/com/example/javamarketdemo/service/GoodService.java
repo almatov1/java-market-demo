@@ -4,9 +4,7 @@ import com.example.javamarketdemo.dto.GoodDto;
 import com.example.javamarketdemo.entity.Good;
 import com.example.javamarketdemo.repository.GoodRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -15,12 +13,8 @@ import java.time.LocalDateTime;
 @RequiredArgsConstructor
 public class GoodService {
 
-    @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
-    String kafkaTopic = "basic-topic";
-
-
     private final GoodRepository goodRepository;
+    private final KafkaSenderService kafkaSenderService;
 
     public Good save(GoodDto goodDto) {
         Good good = new Good()
@@ -31,7 +25,7 @@ public class GoodService {
     }
 
     public Iterable<Good> getAll(int offset, int limit) {
-        kafkaTemplate.send(kafkaTopic, "hello");
+        kafkaSenderService.sendMessage("Hello world!");
 
         return goodRepository.findAll(PageRequest.of(offset, limit));
     }
