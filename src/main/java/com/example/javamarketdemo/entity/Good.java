@@ -14,12 +14,6 @@ import java.util.UUID;
 @Data
 @Accessors(chain = true)
 public class Good {
-    //    @Id
-//    @GenericGenerator(name = "uuid2")
-//    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "uuid2")
-//    @Column(length = 36, nullable = false, updatable = false)
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.UUID)
     @Id
     @GeneratedValue
     @UuidGenerator
