@@ -8,11 +8,11 @@
 - [X] pagination
 - [X] UUID
 - [X] kafka
-- [ ] CRUD
 - [ ] redis
-- [ ] JWT
 - [ ] Functional, Unit test
 - [ ] Syntax, analytic tests
+- [ ] JWT
+- [ ] CRUD
 - [ ] CI/CD
 - [ ] elasticsearch
 - [ ] kubernetes
