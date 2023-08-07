@@ -8,7 +8,7 @@
 - [X] pagination
 - [X] UUID
 - [X] kafka
-- [ ] redis
+- [X] cache (spring-cache)
 - [ ] Functional, Unit test
 - [ ] Syntax, analytic tests
 - [ ] JWT

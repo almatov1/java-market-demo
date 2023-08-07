@@ -4,10 +4,14 @@ import com.example.javamarketdemo.dto.GoodDto;
 import com.example.javamarketdemo.entity.Good;
 import com.example.javamarketdemo.repository.GoodRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.Caching;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.concurrent.TimeUnit;
 
 @Service
 @RequiredArgsConstructor
@@ -20,13 +24,25 @@ public class GoodService {
         Good good = new Good()
                 .setName(goodDto.getName())
                 .setCreatedAt(LocalDateTime.now());
-
         return goodRepository.save(good);
     }
 
-    public Iterable<Good> getAll(int offset, int limit) {
-        kafkaSenderService.sendMessage("Hello world!");
+    @Caching(
+            cacheable = {
+                    @Cacheable(value = "getAllGood", key = "#offset-#limit", condition = "!#updateCache")
+            },
+            put = {
+                    @CachePut(value = "getAllGood", key = "#offset-#limit", condition = "#updateCache")
+            }
+    )
+    public Iterable<Good> getAll(int offset, int limit, boolean updateCache) {
+        try {
+            TimeUnit.SECONDS.sleep(5L);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
+        kafkaSenderService.sendMessage("Hello world!");
         return goodRepository.findAll(PageRequest.of(offset, limit));
     }
 }

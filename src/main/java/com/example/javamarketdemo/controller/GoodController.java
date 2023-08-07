@@ -14,9 +14,11 @@ import org.springframework.web.bind.annotation.*;
 public class GoodController {
 
     private final GoodService goodService;
+    public boolean updateCache = false;
 
     @PostMapping
     public Good save(@RequestBody GoodDto goodDto) {
+        updateCache = true;
         return goodService.save(goodDto);
     }
 
@@ -37,6 +39,8 @@ public class GoodController {
             @Max(100)
             Integer limit
     ) {
-        return goodService.getAll(offset, limit);
+        Iterable<Good> resultOfGetAll = goodService.getAll(offset, limit, updateCache);
+        updateCache = false;
+        return resultOfGetAll;
     }
 }

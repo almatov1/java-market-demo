@@ -10,6 +10,7 @@ public class KafkaSenderService {
 
     private final KafkaTemplate<String, String> kafkaTemplate;
     String kafkaTopic = "basic-topic";
+    
 
     public void sendMessage(String message) {
         kafkaTemplate.send(kafkaTopic, message);
