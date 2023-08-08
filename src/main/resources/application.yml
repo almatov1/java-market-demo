@@ -7,3 +7,14 @@ spring:
     bootstrap-servers: localhost:9092
     consumer:
       group-id: test-group
+logging:
+  level:
+    org:
+      springframework: info
+    io:
+      app: info
+  file:
+    name: application.log
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"

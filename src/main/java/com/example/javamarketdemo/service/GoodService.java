@@ -4,6 +4,7 @@ import com.example.javamarketdemo.dto.GoodDto;
 import com.example.javamarketdemo.entity.Good;
 import com.example.javamarketdemo.repository.GoodRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cache.annotation.Caching;
@@ -14,6 +15,7 @@ import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
 
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class GoodService {
 
@@ -43,6 +45,7 @@ public class GoodService {
         }
 
         kafkaSenderService.sendMessage("Hello world!");
+        log.info("All goods showed");
         return goodRepository.findAll(PageRequest.of(offset, limit));
     }
 }

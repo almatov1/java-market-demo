@@ -9,11 +9,19 @@
 - [X] UUID :white_check_mark:
 - [X] kafka :white_check_mark:
 - [X] cache (spring-cache) :white_check_mark:
-- [ ] Functional, Unit test :clock1:
-- [ ] Syntax, analytic tests :clock1:
-- [ ] logger :clock1:
+- [X] JUnit Jupiter :white_check_mark:
+- [ ] Hamcrest :clock1:
+- [ ] Mockito :clock1:
+- [X] Syntax tests (IntelliJ) :white_check_mark:
+- [X] logger :white_check_mark:
 - [ ] JWT :clock1:
+- [ ] DDD :clock1:
+- [ ] Onion Architecture :clock1:
+- [ ] RestController :clock1:
 - [ ] CRUD :clock1:
-- [ ] CI/CD :clock1:
-- [ ] elasticsearch :clock1:
-- [ ] kubernetes :clock1:
+
+
+- Advanced level
+    - [ ] CI/CD :clock1:
+    - [ ] elasticsearch :clock1:
+    - [ ] kubernetes :clock1:
