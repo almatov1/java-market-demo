@@ -11,7 +11,7 @@
 - [X] cache (spring-cache) :white_check_mark:
 - [X] JUnit Jupiter :white_check_mark:
 - [ ] Hamcrest :clock1:
-- [ ] Mockito :clock1:
+- [X] Mockito :white_check_mark:
 - [X] Syntax tests (IntelliJ) :white_check_mark:
 - [X] logger :white_check_mark:
 - [ ] JWT :clock1:

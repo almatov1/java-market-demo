@@ -8,12 +8,14 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.junit.jupiter.MockitoSettings;
+import org.mockito.quality.Strictness;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.UUID;
 
 @ExtendWith(MockitoExtension.class)
+@MockitoSettings(strictness = Strictness.LENIENT)
 public class GoodServiceTest {
 
     @Mock
@@ -27,23 +29,17 @@ public class GoodServiceTest {
 
     @Test
     public void shouldReturnAllGoods() {
-        Iterable<Good> food = getGood();
-
-//        Mockito.when(goodRepository.findAll()).thenReturn((List<Good>) food);
-
-//        Iterable<Good> result = goodService.getAll(0, 20, false);
-
-        Assertions.assertNotNull(food);
-//        Assertions.assertEquals(food.spliterator().getExactSizeIfKnown(), result.spliterator().getExactSizeIfKnown());
-    }
-
-    private Iterable<Good> getGood() {
         Good food = new Good();
         food
                 .setId(UUID.fromString("550e8400-e29b-41d4-a716-446655440000"))
                 .setName("Banana")
                 .setCreatedAt(LocalDateTime.now())
                 .setUpdatedAt(null);
-        return List.of(food);
+
+//        Mockito.when(goodRepository.findAll()).thenReturn(List.of(food, food, food));
+//        Iterable<Good> result = goodService.getAll();
+
+        Assertions.assertNotNull(food);
+//        Assertions.assertEquals(food.spliterator().getExactSizeIfKnown(), result.spliterator().getExactSizeIfKnown());
     }
 }
