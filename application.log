@@ -1,183 +1,50 @@
-2023-08-08 12:54:59,088 INFO  [main] com.example.javamarketdemo.JavaMarketDemoApplication : Starting JavaMarketDemoApplication using Java 19.0.2 with PID 80929 (/Users/edauir/Desktop/projects/java-market-demo/build/classes/java/main started by edauir in /Users/edauir/Desktop/projects/java-market-demo)
-2023-08-08 12:54:59,091 INFO  [main] com.example.javamarketdemo.JavaMarketDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2023-08-08 12:55:00,476 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-08-08 12:55:00,561 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interfaces.
-2023-08-08 12:55:01,467 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
-2023-08-08 12:55:01,478 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
-2023-08-08 12:55:01,479 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.11]
-2023-08-08 12:55:01,620 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
-2023-08-08 12:55:01,621 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2403 ms
-2023-08-08 12:55:01,855 INFO  [main] org.flywaydb.core.internal.license.VersionPrinter : Flyway Community Edition 9.16.3 by Redgate
-2023-08-08 12:55:01,855 INFO  [main] org.flywaydb.core.internal.license.VersionPrinter : See release notes here: https://rd.gt/416ObMi
-2023-08-08 12:55:01,855 INFO  [main] org.flywaydb.core.internal.license.VersionPrinter : 
-2023-08-08 12:55:01,866 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
-2023-08-08 12:55:02,917 ERROR [main] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Exception during pool initialization.
-org.postgresql.util.PSQLException: Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342)
-	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
-	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
-	at org.postgresql.Driver.makeConnection(Driver.java:443)
-	at org.postgresql.Driver.connect(Driver.java:297)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
-	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48)
-	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
-	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140)
-	at org.flywaydb.core.Flyway.migrate(Flyway.java:140)
-	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at com.example.javamarketdemo.JavaMarketDemoApplication.main(JavaMarketDemoApplication.java:12)
-Caused by: java.net.ConnectException: Connection refused
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:535)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:666)
-	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
-	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
-	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132)
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
-	... 36 common frames omitted
-2023-08-08 12:55:02,941 WARN  [main] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-SQL State  : 08001
-Error Code : 0
-Message    : Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+2023-08-09 11:04:55,277 INFO  [main] com.example.javamarketdemo.JavaMarketDemoApplication : Starting JavaMarketDemoApplication using Java 19.0.2 with PID 94839 (/Users/edauir/Desktop/projects/java-market-demo/build/classes/java/main started by edauir in /Users/edauir/Desktop/projects/java-market-demo)
+2023-08-09 11:04:55,292 INFO  [main] com.example.javamarketdemo.JavaMarketDemoApplication : No active profile set, falling back to 1 default profile: "default"
+2023-08-09 11:04:56,666 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-09 11:04:56,758 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 1 JPA repository interfaces.
+2023-08-09 11:04:57,751 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-08-09 11:04:57,764 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-08-09 11:04:57,764 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-09 11:04:57,891 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-08-09 11:04:57,892 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2489 ms
+2023-08-09 11:04:58,149 INFO  [main] org.flywaydb.core.internal.license.VersionPrinter : Flyway Community Edition 9.16.3 by Redgate
+2023-08-09 11:04:58,149 INFO  [main] org.flywaydb.core.internal.license.VersionPrinter : See release notes here: https://rd.gt/416ObMi
+2023-08-09 11:04:58,149 INFO  [main] org.flywaydb.core.internal.license.VersionPrinter : 
+2023-08-09 11:04:58,161 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-08-09 11:04:58,423 INFO  [main] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@21e5f0b6
+2023-08-09 11:04:58,424 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-08-09 11:04:58,446 INFO  [main] org.flywaydb.core.internal.database.base.BaseDatabaseType : Database: jdbc:postgresql://localhost:5432/db (PostgreSQL 15.3)
+2023-08-09 11:04:58,493 INFO  [main] org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory : Schema history table "public"."flyway_schema_history" does not exist yet
+2023-08-09 11:04:58,497 INFO  [main] org.flywaydb.core.internal.command.DbValidate : Successfully validated 2 migrations (execution time 00:00.021s)
+2023-08-09 11:04:58,540 INFO  [main] org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory : Creating Schema History table "public"."flyway_schema_history" ...
+2023-08-09 11:04:58,654 INFO  [main] org.flywaydb.core.internal.command.DbMigrate : Current version of schema "public": << Empty Schema >>
+2023-08-09 11:04:58,683 INFO  [main] org.flywaydb.core.internal.command.DbMigrate : Migrating schema "public" to version "1.0.0 - creating extension uuid-ossp"
+2023-08-09 11:04:58,755 INFO  [main] org.flywaydb.core.internal.command.DbMigrate : Migrating schema "public" to version "1.0.1 - creating good table"
+2023-08-09 11:04:58,791 INFO  [main] org.flywaydb.core.internal.command.DbMigrate : Successfully applied 2 migrations to schema "public", now at version v1.0.1 (execution time 00:00.165s)
+2023-08-09 11:04:59,085 INFO  [main] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-09 11:04:59,129 INFO  [main] org.hibernate.Version : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-09 11:04:59,131 INFO  [main] org.hibernate.cfg.Environment : HHH000406: Using bytecode reflection optimizer
+2023-08-09 11:04:59,246 INFO  [main] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-08-09 11:04:59,385 INFO  [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-09 11:04:59,581 INFO  [main] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-08-09 11:05:00,215 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-09 11:05:00,218 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-09 11:05:00,850 WARN  [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-09 11:05:01,646 WARN  [main] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration : 
 
-2023-08-08 12:55:02,946 INFO  [main] org.apache.catalina.core.StandardService : Stopping service [Tomcat]
-2023-08-08 12:55:02,971 INFO  [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger : 
+Using generated security password: 3a47f936-27d4-4445-b7ae-9af32980fc42
 
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-08-08 12:55:02,992 ERROR [main] org.springframework.boot.SpringApplication : Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-SQL State  : 08001
-Error Code : 0
-Message    : Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at com.example.javamarketdemo.JavaMarketDemoApplication.main(JavaMarketDemoApplication.java:12)
-Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database: Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-SQL State  : 08001
-Error Code : 0
-Message    : Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
-
-	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:60)
-	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
-	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140)
-	at org.flywaydb.core.Flyway.migrate(Flyway.java:140)
-	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
-	... 18 common frames omitted
-Caused by: org.postgresql.util.PSQLException: Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342)
-	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
-	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
-	at org.postgresql.Driver.makeConnection(Driver.java:443)
-	at org.postgresql.Driver.connect(Driver.java:297)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
-	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48)
-	... 24 common frames omitted
-Caused by: java.net.ConnectException: Connection refused
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:535)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:585)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:666)
-	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
-	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
-	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132)
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
-	... 36 common frames omitted
-2023-08-08 12:55:49,345 INFO  [main] com.example.javamarketdemo.JavaMarketDemoApplication : Starting JavaMarketDemoApplication using Java 19.0.2 with PID 80962 (/Users/edauir/Desktop/projects/java-market-demo/build/classes/java/main started by edauir in /Users/edauir/Desktop/projects/java-market-demo)
-2023-08-08 12:55:49,349 INFO  [main] com.example.javamarketdemo.JavaMarketDemoApplication : No active profile set, falling back to 1 default profile: "default"
-2023-08-08 12:55:50,834 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-08-08 12:55:50,911 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 1 JPA repository interfaces.
-2023-08-08 12:55:51,858 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
-2023-08-08 12:55:51,870 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
-2023-08-08 12:55:51,870 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.11]
-2023-08-08 12:55:52,009 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
-2023-08-08 12:55:52,010 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2543 ms
-2023-08-08 12:55:52,254 INFO  [main] org.flywaydb.core.internal.license.VersionPrinter : Flyway Community Edition 9.16.3 by Redgate
-2023-08-08 12:55:52,254 INFO  [main] org.flywaydb.core.internal.license.VersionPrinter : See release notes here: https://rd.gt/416ObMi
-2023-08-08 12:55:52,254 INFO  [main] org.flywaydb.core.internal.license.VersionPrinter : 
-2023-08-08 12:55:52,266 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
-2023-08-08 12:55:52,606 INFO  [main] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7c950b3b
-2023-08-08 12:55:52,608 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
-2023-08-08 12:55:52,631 INFO  [main] org.flywaydb.core.internal.database.base.BaseDatabaseType : Database: jdbc:postgresql://localhost:5432/db (PostgreSQL 15.3)
-2023-08-08 12:55:52,681 INFO  [main] org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory : Schema history table "public"."flyway_schema_history" does not exist yet
-2023-08-08 12:55:52,685 INFO  [main] org.flywaydb.core.internal.command.DbValidate : Successfully validated 2 migrations (execution time 00:00.020s)
-2023-08-08 12:55:52,760 INFO  [main] org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory : Creating Schema History table "public"."flyway_schema_history" ...
-2023-08-08 12:55:52,886 INFO  [main] org.flywaydb.core.internal.command.DbMigrate : Current version of schema "public": << Empty Schema >>
-2023-08-08 12:55:52,899 INFO  [main] org.flywaydb.core.internal.command.DbMigrate : Migrating schema "public" to version "1.0.0 - creating extension uuid-ossp"
-2023-08-08 12:55:52,983 INFO  [main] org.flywaydb.core.internal.command.DbMigrate : Migrating schema "public" to version "1.0.1 - creating good table"
-2023-08-08 12:55:53,005 INFO  [main] org.flywaydb.core.internal.command.DbMigrate : Successfully applied 2 migrations to schema "public", now at version v1.0.1 (execution time 00:00.130s)
-2023-08-08 12:55:53,260 INFO  [main] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-08-08 12:55:53,347 INFO  [main] org.hibernate.Version : HHH000412: Hibernate ORM core version 6.2.6.Final
-2023-08-08 12:55:53,351 INFO  [main] org.hibernate.cfg.Environment : HHH000406: Using bytecode reflection optimizer
-2023-08-08 12:55:53,520 INFO  [main] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
-2023-08-08 12:55:53,655 INFO  [main] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-08-08 12:55:53,888 INFO  [main] org.hibernate.bytecode.internal.BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
-2023-08-08 12:55:54,646 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-08-08 12:55:54,651 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-08-08 12:55:55,319 WARN  [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-08-08 12:55:56,127 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
-2023-08-08 12:55:56,150 INFO  [main] com.example.javamarketdemo.JavaMarketDemoApplication : Started JavaMarketDemoApplication in 7.642 seconds (process running for 14.438)
-2023-08-08 12:56:18,785 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-08-08 12:56:18,788 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
-2023-08-08 12:56:18,798 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet : Completed initialization in 10 ms
-2023-08-08 12:56:19,879 INFO  [http-nio-8080-exec-8] org.springdoc.api.AbstractOpenApiResource : Init duration for springdoc-openapi is: 558 ms
-2023-08-08 12:56:28,447 INFO  [http-nio-8080-exec-9] org.apache.kafka.clients.producer.ProducerConfig : ProducerConfig values: 
+2023-08-09 11:05:01,761 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3100b5cf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7baea18b, org.springframework.security.web.context.SecurityContextHolderFilter@59f5a376, org.springframework.security.web.header.HeaderWriterFilter@f69e35a, org.springframework.security.web.csrf.CsrfFilter@74471600, org.springframework.security.web.authentication.logout.LogoutFilter@44d36b56, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@16a78700, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@65528bcf, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5ad13be4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4d50f682, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1dfd3635, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@209f0986, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e93f91d, org.springframework.security.web.access.ExceptionTranslationFilter@589a82af, org.springframework.security.web.access.intercept.AuthorizationFilter@14b0b7f9]
+2023-08-09 11:05:01,846 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-09 11:05:01,868 INFO  [main] com.example.javamarketdemo.JavaMarketDemoApplication : Started JavaMarketDemoApplication in 7.349 seconds (process running for 13.492)
+2023-08-09 11:05:24,441 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-09 11:05:24,442 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-08-09 11:05:24,447 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet : Completed initialization in 4 ms
+2023-08-09 13:10:18,862 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=29m49s421ms).
+2023-08-09 13:16:18,433 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m29s503ms).
+2023-08-09 14:16:43,429 INFO  [http-nio-8080-exec-5] org.apache.kafka.clients.producer.ProducerConfig : ProducerConfig values: 
 	acks = -1
 	auto.include.jmx.reporter = true
 	batch.size = 16384
@@ -267,22 +134,29 @@ Caused by: java.net.ConnectException: Connection refused
 	transactional.id = null
 	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
 
-2023-08-08 12:56:28,482 INFO  [http-nio-8080-exec-9] org.apache.kafka.clients.producer.KafkaProducer : [Producer clientId=producer-1] Instantiated an idempotent producer.
-2023-08-08 12:56:28,534 INFO  [http-nio-8080-exec-9] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.4.1
-2023-08-08 12:56:28,535 INFO  [http-nio-8080-exec-9] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: 8a516edc2755df89
-2023-08-08 12:56:28,535 INFO  [http-nio-8080-exec-9] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1691481388531
-2023-08-08 12:56:29,147 WARN  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Error while fetching metadata with correlation id 1 : {basic-topic=LEADER_NOT_AVAILABLE}
-2023-08-08 12:56:29,150 INFO  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Cluster ID: d-IJcyaHTlqLIDREBI41Gw
-2023-08-08 12:56:29,154 INFO  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.producer.internals.TransactionManager : [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
-2023-08-08 12:56:29,270 WARN  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Error while fetching metadata with correlation id 4 : {basic-topic=LEADER_NOT_AVAILABLE}
-2023-08-08 12:56:29,384 WARN  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Error while fetching metadata with correlation id 5 : {basic-topic=LEADER_NOT_AVAILABLE}
-2023-08-08 12:56:29,492 INFO  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Resetting the last seen epoch of partition basic-topic-0 to 0 since the associated topicId changed from null to fpPdFrAsStiaP_nr10oM4A
-2023-08-08 12:56:29,506 INFO  [http-nio-8080-exec-9] com.example.javamarketdemo.service.GoodService : All goods showed
-2023-08-08 12:58:02,229 INFO  [SpringApplicationShutdownHook] org.apache.kafka.clients.producer.KafkaProducer : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
-2023-08-08 12:58:02,251 INFO  [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics : Metrics scheduler closed
-2023-08-08 12:58:02,252 INFO  [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2023-08-08 12:58:02,252 INFO  [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics : Metrics reporters closed
-2023-08-08 12:58:02,254 INFO  [SpringApplicationShutdownHook] org.apache.kafka.common.utils.AppInfoParser : App info kafka.producer for producer-1 unregistered
-2023-08-08 12:58:02,256 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-08-08 12:58:02,265 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
-2023-08-08 12:58:02,277 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-08-09 14:16:43,502 INFO  [http-nio-8080-exec-5] org.apache.kafka.clients.producer.KafkaProducer : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-08-09 14:16:43,575 INFO  [http-nio-8080-exec-5] org.apache.kafka.common.utils.AppInfoParser : Kafka version: 3.4.1
+2023-08-09 14:16:43,576 INFO  [http-nio-8080-exec-5] org.apache.kafka.common.utils.AppInfoParser : Kafka commitId: 8a516edc2755df89
+2023-08-09 14:16:43,576 INFO  [http-nio-8080-exec-5] org.apache.kafka.common.utils.AppInfoParser : Kafka startTimeMs: 1691572603568
+2023-08-09 14:16:44,649 WARN  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Error while fetching metadata with correlation id 1 : {basic-topic=LEADER_NOT_AVAILABLE}
+2023-08-09 14:16:44,652 INFO  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Cluster ID: fuKHuFE0SI6kOlHmkBAErg
+2023-08-09 14:16:44,683 INFO  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.producer.internals.TransactionManager : [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+2023-08-09 14:16:44,758 WARN  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Error while fetching metadata with correlation id 4 : {basic-topic=LEADER_NOT_AVAILABLE}
+2023-08-09 14:16:44,864 WARN  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Error while fetching metadata with correlation id 5 : {basic-topic=LEADER_NOT_AVAILABLE}
+2023-08-09 14:16:44,974 WARN  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Error while fetching metadata with correlation id 6 : {basic-topic=LEADER_NOT_AVAILABLE}
+2023-08-09 14:16:45,084 WARN  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Error while fetching metadata with correlation id 7 : {basic-topic=LEADER_NOT_AVAILABLE}
+2023-08-09 14:16:45,192 WARN  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Error while fetching metadata with correlation id 8 : {basic-topic=LEADER_NOT_AVAILABLE}
+2023-08-09 14:16:45,303 INFO  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata : [Producer clientId=producer-1] Resetting the last seen epoch of partition basic-topic-0 to 0 since the associated topicId changed from null to _dQXJljIRea8FCkOhv8_8Q
+2023-08-09 14:16:45,320 INFO  [http-nio-8080-exec-5] com.example.javamarketdemo.service.GoodService : All goods showed
+2023-08-09 14:18:02,316 INFO  [http-nio-8080-exec-9] org.springdoc.api.AbstractOpenApiResource : Init duration for springdoc-openapi is: 372 ms
+2023-08-09 14:25:45,450 INFO  [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient : [Producer clientId=producer-1] Node -1 disconnected.
+2023-08-09 15:17:19,750 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s786ms), soft-evicting connections from pool.
+2023-08-09 16:05:55,875 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m5s825ms).
+2023-08-09 16:58:23,085 INFO  [SpringApplicationShutdownHook] org.apache.kafka.clients.producer.KafkaProducer : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-08-09 16:58:23,112 INFO  [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics : Metrics scheduler closed
+2023-08-09 16:58:23,112 INFO  [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-08-09 16:58:23,113 INFO  [SpringApplicationShutdownHook] org.apache.kafka.common.metrics.Metrics : Metrics reporters closed
+2023-08-09 16:58:23,119 INFO  [SpringApplicationShutdownHook] org.apache.kafka.common.utils.AppInfoParser : App info kafka.producer for producer-1 unregistered
+2023-08-09 16:58:23,129 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-09 16:58:23,164 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-08-09 16:58:23,173 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.

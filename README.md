@@ -19,6 +19,8 @@
 - [ ] Onion Architecture :clock1:
 - [ ] RestController :clock1:
 - [ ] CRUD :clock1:
+- [ ] Upload files :clock1:
+- [ ] Interface layer :clock1:
 
 - Advanced level
     - [ ] CI/CD :clock1:
