@@ -13,8 +13,8 @@
 - [X] Mockito :white_check_mark:
 - [X] Syntax tests (IntelliJ) :white_check_mark:
 - [X] logger :white_check_mark:
-- [X] Spring Security :clock1:
-- [X] JWT :clock1:
+- [X] Spring Security :white_check_mark:
+- [X] JWT :white_check_mark:
 - [ ] DDD :clock1:
 - [ ] Onion Architecture :clock1:
 - [ ] CRUD :clock1:
