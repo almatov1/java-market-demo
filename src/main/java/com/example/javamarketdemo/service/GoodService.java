@@ -11,7 +11,6 @@ import org.springframework.cache.annotation.Caching;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
 
 @Service
@@ -24,8 +23,7 @@ public class GoodService {
 
     public Good save(GoodDto goodDto) {
         Good good = new Good()
-                .setName(goodDto.getName())
-                .setCreatedAt(LocalDateTime.now());
+                .setName(goodDto.getName());
         return goodRepository.save(good);
     }
 

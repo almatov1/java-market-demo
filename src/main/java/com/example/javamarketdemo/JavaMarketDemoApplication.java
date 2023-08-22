@@ -12,5 +12,4 @@ public class JavaMarketDemoApplication {
         SpringApplication.run(JavaMarketDemoApplication.class, args);
     }
 
-
 }
