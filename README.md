@@ -15,10 +15,10 @@
 - [X] logger :white_check_mark:
 - [X] Spring Security :white_check_mark:
 - [X] JWT :white_check_mark:
+- [ ] Keycloak :clock1:
 - [ ] DDD :clock1:
 - [ ] Onion Architecture :clock1:
 - [ ] CRUD :clock1:
-- [ ] Upload files :clock1:
 
 - Advanced level
     - [ ] CI/CD :clock1:
