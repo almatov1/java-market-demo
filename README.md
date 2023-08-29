@@ -15,12 +15,12 @@
 - [X] logger :white_check_mark:
 - [X] Spring Security :white_check_mark:
 - [X] JWT :white_check_mark:
-- [ ] Keycloak :clock1:
-- [ ] DDD :clock1:
-- [ ] Onion Architecture :clock1:
-- [ ] CRUD :clock1:
+- [ ] Keycloak :clock2:
+- [X] DDD :white_check_mark:
+- [X] Onion Architecture :white_check_mark:
+- [X] CRUD :white_check_mark:
 
 - Advanced level
-    - [ ] CI/CD :clock1:
-    - [ ] elasticsearch :clock1:
-    - [ ] kubernetes :clock1:
+    - [ ] CI/CD :clock6:
+    - [ ] elasticsearch :clock7:
+    - [ ] kubernetes :clock8:
