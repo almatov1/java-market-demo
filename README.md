@@ -16,7 +16,7 @@
 - [X] logger :white_check_mark:
 - [X] Spring Security :white_check_mark:
 - [X] JWT :white_check_mark:
-- [X] Keycloak :white_check_mark
+- [X] Keycloak :white_check_mark:
 - [X] DDD :white_check_mark:
 - [X] Onion Architecture :white_check_mark:
 - [X] CRUD :white_check_mark:
