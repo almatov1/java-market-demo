@@ -8,6 +8,11 @@ spring:
     bootstrap-servers: localhost:9092
     consumer:
       group-id: test-group
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8443/realms/development
 logging:
   level:
     org:

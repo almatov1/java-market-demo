@@ -19,6 +19,11 @@ public class MainController {
 
     @GetMapping("/authenticated")
     public String homeAuthenticated() {
-        return "Hello authenticated user";
+        return "Hello authenticated";
+    }
+
+    @GetMapping("/all")
+    public String homeGuest() {
+        return "Hello guest";
     }
 }
