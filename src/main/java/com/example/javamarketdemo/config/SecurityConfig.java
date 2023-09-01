@@ -18,6 +18,7 @@ import java.util.stream.Stream;
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
@@ -26,10 +27,10 @@ public class SecurityConfig {
                 )
                 .authorizeHttpRequests(
                         http -> http
-                                .requestMatchers("/role/all").permitAll()
                                 .requestMatchers("/role/user").hasRole("USER")
                                 .requestMatchers("role/admin").hasRole("ADMIN")
                                 .requestMatchers("/role/authenticated").authenticated()
+                                .anyRequest().permitAll()
                 )
                 .build();
     }

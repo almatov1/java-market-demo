@@ -30,8 +30,10 @@
 
 - [X] Roles :white_check_mark:
 - [X] Auth :white_check_mark:
-- [X] Link to Spring :white_check_mark:
-- [ ] Registration :clock8:
+- [X] Oauth2 on Spring :white_check_mark:
+- [X] Import realm :white_check_mark:
+- [X] Registration (Need admin AccessToken) :white_check_mark:
+- [X] Refresh Token :white_check_mark:
 - [ ] Telephone :clock8:
-- [ ] Add role to user :clock9:
-- [ ] Spring Controllers :clock10:
+- [ ] Roles :clock8:
+- [ ] Spring Controllers Or Spring Bridge :clock8:

@@ -1,11 +1,85 @@
-GET http://localhost:8080/role/user
-Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMaEFMc3BZeF9xVlhuMXFrbHZKcmFvM0wxLXJDaFVHMVZ1eGhNTThjUHJrIn0.eyJleHAiOjE2OTM0ODM2NzIsImlhdCI6MTY5MzQ4MzM3MiwianRpIjoiM2M2YTQ5YWItMWQ4MS00YTIxLTg5MDQtMDEyYWZiY2M5NmJjIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4NDQzL3JlYWxtcy9kZXZlbG9wbWVudCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJjMGIwMjNlNy0yYmFjLTRjODQtYWVjZS04ZjAxMzhiZGU5YTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJTcHJpbmdLZXljbG9ha1NlY3VyaXR5Iiwic2Vzc2lvbl9zdGF0ZSI6IjVhNTBiNDIzLTg0YjAtNGE1OC1hNTU0LTc0ZDhmZDZmYjhiNSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJST0xFX1VTRVIiLCJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtZGV2ZWxvcG1lbnQiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjVhNTBiNDIzLTg0YjAtNGE1OC1hNTU0LTc0ZDhmZDZmYjhiNSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJzcHJpbmdfc2VjdXJpdHlfcm9sZXMiOlsiUk9MRV9VU0VSIiwib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLWRldmVsb3BtZW50IiwidW1hX2F1dGhvcml6YXRpb24iXSwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdGVyIiwiZ2l2ZW5fbmFtZSI6IiIsImZhbWlseV9uYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZXJAZXhhbXBsZS5jb20ifQ.lbr6_MR5fi9Cmt12bnG1AXqMm5tYEAyuYSUJzShDLThDYmKWxek91bb9YrdLqJrtPg9aViNn3MBMzvtM6U-SBrIV7AyC2xOJDd6L1QkKqGj5H7chaupCovBplp7YMouY31dm6u5C0N6VHYu2gXYZYetw2mKwBDS8xxJXTWVqDSglt0P5x1L8yojFE9cEvnse-HGEKT6tP5gsHxwIvAQChRgiMEQcSqegtOiftlzXQj2rlcN0r1RMOloOp4auKNq8SZK1rpwPZiLrzQXvUZqoXoFq6Alry_Svper3lX3HCE3jEPnXiMAXIG78HymzYOGpzhOYjX3Curs-3BkVuBzhsw
+
+# #####################################################################################
+
+#User Data
+
+#GET http://localhost:8080/role/user
+#Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMaEFMc3BZeF9xVlhuMXFrbHZKcmFvM0wxLXJDaFVHMVZ1eGhNTThjUHJrIn0.eyJleHAiOjE2OTM0ODM2NzIsImlhdCI6MTY5MzQ4MzM3MiwianRpIjoiM2M2YTQ5YWItMWQ4MS00YTIxLTg5MDQtMDEyYWZiY2M5NmJjIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4NDQzL3JlYWxtcy9kZXZlbG9wbWVudCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJjMGIwMjNlNy0yYmFjLTRjODQtYWVjZS04ZjAxMzhiZGU5YTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJTcHJpbmdLZXljbG9ha1NlY3VyaXR5Iiwic2Vzc2lvbl9zdGF0ZSI6IjVhNTBiNDIzLTg0YjAtNGE1OC1hNTU0LTc0ZDhmZDZmYjhiNSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJST0xFX1VTRVIiLCJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtZGV2ZWxvcG1lbnQiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjVhNTBiNDIzLTg0YjAtNGE1OC1hNTU0LTc0ZDhmZDZmYjhiNSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJzcHJpbmdfc2VjdXJpdHlfcm9sZXMiOlsiUk9MRV9VU0VSIiwib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLWRldmVsb3BtZW50IiwidW1hX2F1dGhvcml6YXRpb24iXSwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdGVyIiwiZ2l2ZW5fbmFtZSI6IiIsImZhbWlseV9uYW1lIjoiIiwiZW1haWwiOiJ0ZXN0ZXJAZXhhbXBsZS5jb20ifQ.lbr6_MR5fi9Cmt12bnG1AXqMm5tYEAyuYSUJzShDLThDYmKWxek91bb9YrdLqJrtPg9aViNn3MBMzvtM6U-SBrIV7AyC2xOJDd6L1QkKqGj5H7chaupCovBplp7YMouY31dm6u5C0N6VHYu2gXYZYetw2mKwBDS8xxJXTWVqDSglt0P5x1L8yojFE9cEvnse-HGEKT6tP5gsHxwIvAQChRgiMEQcSqegtOiftlzXQj2rlcN0r1RMOloOp4auKNq8SZK1rpwPZiLrzQXvUZqoXoFq6Alry_Svper3lX3HCE3jEPnXiMAXIG78HymzYOGpzhOYjX3Curs-3BkVuBzhsw
+
+# #####################################################################################
+
+#Auth Request
 
 #POST http://localhost:8443/realms/development/protocol/openid-connect/token
 #Content-Type: application/x-www-form-urlencoded
 #
 #client_id = SpringKeycloakSecurity &
-#client_secret = oJyh8x3EBqwswkVvPZrb1gkzx6TLYVqa &
+#client_secret = X2ynrRxnxDeiXFOmp8aFsbpo5uNtt2Ev &
 #grant_type = password &
-#username = tester &
-#password = password
+#username = demo &
+#password = password1
+
+# #####################################################################################
+
+#Refresh Token
+
+#POST http://localhost:8443/realms/development/protocol/openid-connect/token
+#Content-Type: application/x-www-form-urlencoded
+#
+#client_id = SpringKeycloakSecurity &
+#client_secret = X2ynrRxnxDeiXFOmp8aFsbpo5uNtt2Ev &
+#grant_type = refresh_token &
+#refresh_token = eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkM2Q0OTgwZi00MzUwLTRkNTctYjgxNi1jMmYwYzQxMDVjNzcifQ.eyJleHAiOjE2OTM1NjM3MjMsImlhdCI6MTY5MzU2MTkyMywianRpIjoiMTFjYzA3NWMtNTVkYi00OGM3LTg5ZjAtODZlOGNkNTE0YzMyIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4NDQzL3JlYWxtcy9kZXZlbG9wbWVudCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODQ0My9yZWFsbXMvZGV2ZWxvcG1lbnQiLCJzdWIiOiIwNGE4Y2Y3NC00MjZhLTRjYzktYjNmZC1mODYyYzg2ZGUwNzkiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoiU3ByaW5nS2V5Y2xvYWtTZWN1cml0eSIsInNlc3Npb25fc3RhdGUiOiIxMDNhNmI5Mi0zZjY0LTRkYjMtOWM4YS03YWM4ODhhM2I1ODAiLCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIxMDNhNmI5Mi0zZjY0LTRkYjMtOWM4YS03YWM4ODhhM2I1ODAifQ.JZ28wvdDkbwZNR9zY5dH0fltLuCdHB1xkKJ5T6rFNmM
+
+# #####################################################################################
+
+#Admin Acccess
+
+#POST http://localhost:8443/realms/development/protocol/openid-connect/token
+#Content-Type: application/x-www-form-urlencoded
+#
+#client_id = SpringKeycloakSecurity &
+#client_secret = X2ynrRxnxDeiXFOmp8aFsbpo5uNtt2Ev &
+#grant_type = client_credentials
+
+# #####################################################################################
+
+#Reg Request
+
+#POST http: //localhost:8443/admin/realms/development/users
+#Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJiN25DYkdWaWsxdEVLNi1kNnpCak1aTDI1T0ljUGtvYkVNVkRVaS13NTMwIn0.eyJleHAiOjE2OTM1NjEyMDMsImlhdCI6MTY5MzU2MDkwMywianRpIjoiNzEwMTc5YTktM2NmMC00ZWIzLWEwMGUtNjFhMThiN2JiMTlmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4NDQzL3JlYWxtcy9kZXZlbG9wbWVudCIsImF1ZCI6WyJyZWFsbS1tYW5hZ2VtZW50IiwiYWNjb3VudCJdLCJzdWIiOiIyNWUxNDExOC0zZDdhLTQ0NGMtODg3Zi1hOWQ5NzdiNWVkZmEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJTcHJpbmdLZXljbG9ha1NlY3VyaXR5IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjgwODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1kZXZlbG9wbWVudCIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsicmVhbG0tbWFuYWdlbWVudCI6eyJyb2xlcyI6WyJtYW5hZ2UtdXNlcnMiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiY2xpZW50SG9zdCI6IjE3Mi4yNi4wLjEiLCJzcHJpbmdfc2VjdXJpdHlfcm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLWRldmVsb3BtZW50IiwidW1hX2F1dGhvcml6YXRpb24iXSwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LXNwcmluZ2tleWNsb2Frc2VjdXJpdHkiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjI2LjAuMSIsImNsaWVudF9pZCI6IlNwcmluZ0tleWNsb2FrU2VjdXJpdHkifQ.CE3munT8mc3gSz9-HEfQNKYWHxsqPPi4syZnNIPLywgsC8Cf5rbuZ2UNZjWj-H86gVVHEt_tQRw8Jon5rp0q5V9ptpMWvu-4sY5KzUockr-C0ocWnnDx2qxxBu_2uRsyBkeEtVud9VwcPcC7-y-34jqChHdgrgbEX2fT9bGAdzE--FH_oeGHL-7_g31Q6GGBqes1v-pWR2fvI1h-n-p9o3HGqIRg8_YL3R793_86TRU35xzwyx6UuLf3QoxTOquB1ob4_31L6klKKLY7H5M-jgVncaFgtTfLpk34pHLb7hiC-izJ_dAIo-6gwA5DskTva6rNH3SohWeeRQhmd4xlTw
+#Content-Type: application/json
+#
+#{
+#  "username": "demo",
+#  "emailVerified": true,
+#  "enabled": true,
+#  "email": "demo@example.com",
+#  "credentials": [
+#    {
+#      "type": "password",
+#      "value": "password1",
+#      "temporary": false
+#}
+#
+#]
+#
+#}
+
+# #####################################################################################
+
+#Add role
+
+POST http://localhost:8443/admin/realms/development/users/04a8cf74-426a-4cc9-b3fd-f862c86de079/role-mappings/realm
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJiN25DYkdWaWsxdEVLNi1kNnpCak1aTDI1T0ljUGtvYkVNVkRVaS13NTMwIn0.eyJleHAiOjE2OTM1NzM3ODUsImlhdCI6MTY5MzU3MzQ4NSwianRpIjoiZDQyMjVmMzQtNjM1ZC00MDIyLWE1NjMtZDQ1N2U5OTc5ZmI5IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4NDQzL3JlYWxtcy9kZXZlbG9wbWVudCIsImF1ZCI6WyJyZWFsbS1tYW5hZ2VtZW50IiwiYWNjb3VudCJdLCJzdWIiOiIyNWUxNDExOC0zZDdhLTQ0NGMtODg3Zi1hOWQ5NzdiNWVkZmEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJTcHJpbmdLZXljbG9ha1NlY3VyaXR5IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjgwODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1kZXZlbG9wbWVudCIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsicmVhbG0tbWFuYWdlbWVudCI6eyJyb2xlcyI6WyJtYW5hZ2UtdXNlcnMiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiY2xpZW50SG9zdCI6IjE3Mi4yNi4wLjEiLCJzcHJpbmdfc2VjdXJpdHlfcm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLWRldmVsb3BtZW50IiwidW1hX2F1dGhvcml6YXRpb24iXSwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LXNwcmluZ2tleWNsb2Frc2VjdXJpdHkiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjI2LjAuMSIsImNsaWVudF9pZCI6IlNwcmluZ0tleWNsb2FrU2VjdXJpdHkifQ.ehQ6g8m_F2r8SKaEHznyQKzkgfaJUMfBikztRxhAA65h1_VxAaTxdkKNgnuimdjsyeui-fKWKeeT6y-Ki0kHh5_vS1oLJ_Ef3hq2Bi9y29zGwW8z0pGdDD5FsPadPnaV315BtJYex3EpYgNbpvMQZJ68GUkYvy7YLSm30ICzjNZmACOb5Zby_PVOTY_Fm4YKePbrYS06-6XUpa1vnXJQeeQlk3IYCcubqA3JUCnRvVa5D2Ikrsjo98jhcTLJ53QVjyNme8PMLwXgtHCuVjcleE2l9sYK11e-1QG3RNRArvmGCKFJSWsI1CHURLDGvSTzBtybLI3-GNDNwe8Pv-MtVQ
+
+[
+  {
+    "composite": false,
+    "clientRole": false,
+    "name": "ROLE_USER",
+    "id": " dzddads",
+    "description": "aaaaa"
+  }
+]
